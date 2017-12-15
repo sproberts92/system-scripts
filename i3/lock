@@ -1,0 +1,36 @@
+#!/bin/sh
+
+white='#ffffff'
+off_white='#ecf0f1'
+black='#141414'
+dark_grey='#1a1a1a'
+light_grey='#555555'
+medium_light_grey='#2a2a2a'
+medium_dark_grey='#222222'
+green='#2ecc71'
+aqua='#1abc9c'
+red='#e74c3c'
+blue='#3498db'
+yellow='#f1c40f'
+orange_red='#e67e22'
+periwinkle='#6c71c4'
+magenta='#ff56ff'
+font='Inconsolata'
+
+i3lock -e -f -t \
+	--clock \
+	--indicator \
+	--keyhlcolor="${green}CC" \
+	--bshlcolor="${red}CC" \
+	--insidewrongcolor="${orange_red}CC" \
+	--insidevercolor="${blue}CC" \
+	--ringcolor="${dark_grey}CC" \
+	--ringwrongcolor="${red}CC" \
+	--ringvercolor="${periwinkle}CC" \
+	--datecolor="${off_white}CC" \
+	--datefont=$font \
+	--datestr="%Y-%m-%d" \
+	--timecolor="${off_white}FF" \
+	--timefont=$font \
+	-i ~/Images/wallpaper.png
+
