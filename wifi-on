@@ -1,0 +1,2 @@
+interface=$(ip link | awk -F: '/wl/ {gsub(/ /, "", $2); print $2; exit}')
+sudo wpa_supplicant -B  -i $interface -c /etc/wpa_supplicant/wpa_supplicant.conf
