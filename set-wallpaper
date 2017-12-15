@@ -1,0 +1,2 @@
+#!/bin/sh
+convert "$@" -resize "1920x1080^" -gravity center -crop 1920x1080+0+0 +repage Images/wallpaper.png
