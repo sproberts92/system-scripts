@@ -1,0 +1,12 @@
+#!/bin/sh
+
+state=$(vpn-check)
+
+case $state in
+		'VPN on')
+			echo '<span foreground="#00FF00">VPN on</span> '
+			;;
+		'VPN off')
+			echo '<span foreground="#FF0000">VPN off</span>'
+			;;
+esac

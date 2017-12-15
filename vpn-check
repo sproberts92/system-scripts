@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[[ -d /proc/sys/net/ipv4/conf/tun0 ]] \
+	&& echo 'VPN on' \
+	|| echo 'VPN off'
+
