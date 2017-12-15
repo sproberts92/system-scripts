@@ -1,0 +1,13 @@
+#!/bin/sh
+links=$(find . \
+		-not  -path "./.git*" \
+		-type f \
+		-not -path "." \
+		-not -path "./create-symlinks")
+
+for link in $links; do
+	abs_path=$(readlink -f $link)
+	echo "${abs_path}"
+	sudo ln -sf $abs_path "/usr/local/bin/"
+done
+
